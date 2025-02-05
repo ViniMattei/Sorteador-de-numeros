@@ -40,7 +40,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Sorteador de números e um soteio onde gerado numeros aleatorios
+Sorteador de números e um sorteio onde gerado números aleatorios
 
 ## 🔖 Layout
 
