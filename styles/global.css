@@ -1,0 +1,65 @@
+*,
+* ::before,
+* ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors */
+  --content-primary: #ffffff;
+  --content-secondary: #c7c9cc;
+  --content-tertiary: #d9d9d9;
+  --content-brand: #c58de7;
+  --color-inverse: #030203;
+
+  /* Background */
+  --bg-primary: #020202;
+  --bg-secondary: #111012;
+  --bg-tertiary: #24222e;
+  --bg-brand: #c58de7;
+  --bg-gray: #3d3d3d;
+
+  /* Accent */
+  --accent-pink: #d586e0;
+  --accent-blue: #91a1fa;
+  --accent-green: #77c0a1;
+  --accent-lime: #d1dc97;
+  --accent-red: #e9a9b3;
+
+  /* Gradient */
+  --gradient-border: linear-gradient(
+    #77c0af 0%,
+    #d1dc97 14.84%,
+    #e9a9b3 32.15%,
+    #d586e0 65.79%,
+    #91a1fa 84.58%
+  );
+  --gradient-bg: linear-gradient(180deg, #d586e0 0%, #91a1fa 98.93%);
+  --gradient-content: linear-gradient(#c7c9cc 0%, #3d3d3d 100%);
+
+  /* Typography */
+  --ff-sora: "Sora", sans-serif;
+  --diplay-lg: 800 4.5rem/1.3rem var(--ff-sora) uppercase;
+  --diplay-md: 800 2.5rem/1.3rem var(--ff-sora) uppercase;
+  --diplay-sm: 700 2rem/1.3rem var(--ff-sora) uppercase;
+
+  --ff-roboto-mono: "Roboto Mono", sans-serif;
+  --overline: 700 1rem/1.5rem var(--ff-roboto-mono) uppercase;
+
+  --ff-roboto-flex: "Roboto Flex", serif;
+  --paragraph-large: 500 1rem/1.5rem var(--ff-roboto-flex);
+  --paragraph-medium: 400 0.875rem/1.5rem var(--ff-roboto-flex);
+  --paragraph-small: 400 0.75rem/1.5rem var(--ff-roboto-flex);
+  --label-medium: 700 1.25rem/1.5rem var(--ff-roboto-flex);
+  --label-small: 700 1rem/1.5rem var(--ff-roboto-flex);
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(180deg, var(--bg-primary) 25%, transparent 100%),
+    url("../assets/image/Shapes.svg");
+
+  background-color: var(--bg-primary);
+}

@@ -1,0 +1,134 @@
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  width: 100%;
+  height: 3.5rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+
+  background: var(--bg-tertiary);
+
+  border: none;
+  line-height: 0;
+
+  position: relative;
+
+  cursor: pointer;
+
+  font-family: "Roboto Flex";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; 
+  text-transform: uppercase;
+
+  & span , img {
+    color: #fff;
+    z-index: 1;
+  }
+  
+  & button:hover {
+   animation: ease-in-out 500ms infinite imageHover;
+    z-index: 1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background: var(--bg-tertiary);
+    border-radius: 0.5rem;
+  }
+
+  &:hover {
+    background: var(--gradient-border);
+    animation: changeGradient 500ms infinite linear;
+    &::after {
+      background: var(--bg-secondary);
+      width: 99.43%;
+      height: 3.3rem;
+    }
+  }
+}
+
+button:hover img {
+  animation: imageHover 500ms infinite forwards;
+}
+
+@keyframes changeGradient {
+  0% {
+    background: linear-gradient(
+      192.78deg,
+      #77c0af 9.02%,
+      #d1dc97 21.38%,
+      #e9a9b3 35.8%,
+      #d586e0 63.82%,
+      #91a1fa 79.48%
+    );
+  }
+  20% {
+    background: linear-gradient(
+      91.26deg,
+      #77c0af 0%,
+      #d1dc97 14.84%,
+      #e9a9b3 32.15%,
+      #d586e0 65.79%,
+      #91a1fa 84.58%
+    );
+  }
+  40% {
+    background: linear-gradient(
+      271.26deg,
+      #77c0af 0.52%,
+      #d1dc97 15.36%,
+      #e9a9b3 32.67%,
+      #d586e0 66.31%,
+      #91a1fa 85.11%
+    );
+  }
+  60% {
+    background: linear-gradient(
+      192.78deg,
+      #77c0af 9.02%,
+      #d1dc97 21.38%,
+      #e9a9b3 35.8%,
+      #d586e0 63.82%,
+      #91a1fa 79.48%
+    );
+  }
+  80% {
+    background: linear-gradient(
+      91.26deg,
+      #77c0af 0%,
+      #d1dc97 14.84%,
+      #e9a9b3 32.15%,
+      #d586e0 65.79%,
+      #91a1fa 84.58%
+    );
+  }
+  100% {
+    background: linear-gradient(
+      271.26deg,
+      #77c0af 0.52%,
+      #d1dc97 15.36%,
+      #e9a9b3 32.67%,
+      #d586e0 66.31%,
+      #91a1fa 85.11%
+    );
+  }
+}
+@keyframes imageHover {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(0.5rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

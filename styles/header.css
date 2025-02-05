@@ -1,0 +1,42 @@
+#container {
+  margin: auto;
+  padding: 4.75rem 8.38rem 9.56rem 2.18rem;
+  max-width: 90rem;
+
+  & #logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6875rem;
+
+    color: var(--content-primary);
+
+    & span {
+      display: flex;
+      align-items: center;
+
+      font-family: Sora;
+      font-size: 1.5rem;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 130%;
+      letter-spacing: -0.06rem;
+    }
+
+    & img {
+      width: 2.125rem;
+      height: 2.125rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #container {
+    padding: 4.75rem 2.18rem 9.56rem 2.18rem;
+  }
+
+  #logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

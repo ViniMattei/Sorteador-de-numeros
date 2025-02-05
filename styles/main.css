@@ -1,0 +1,99 @@
+main {
+  display: flex;
+  justify-content: space-between;
+  gap: 6.75rem;
+  padding-top: 5.5625rem;
+
+  & .overline {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: "Roboto Mono";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    text-transform: uppercase;
+
+    color: var(--content-secondary);
+  }
+
+  & .title-h1 {
+    font-family: Sora;
+    font-size: 4.5rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 130%;
+    letter-spacing: -0.18rem;
+
+    color: var(--content-primary);
+
+    margin-bottom: 2.38rem;
+  }
+
+  & .info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.25rem;
+
+    & .info {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    & .rules {
+      & h2 {
+        font-family: "Roboto Flex";
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+
+        color: var(--content-brand);
+      }
+
+      & p {
+        font-family: "Roboto Flex";
+        font-size: 0.75rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%; /* 1.125rem */
+
+        color: var(--content-secondary);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    gap: 3.75rem;
+    padding-top: 3.75rem;
+
+    & .title-h1 {
+      font-family: Sora;
+      font-size: 2.5rem;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 130%; /* 3.25rem */
+      letter-spacing: -0.1rem;
+      text-transform: uppercase;
+    }
+
+    & .info-container {
+      margin-top: 2rem;
+      & .rules {
+        & h2 {
+          font-size: 0.875rem;
+        }
+
+        & p {
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+}

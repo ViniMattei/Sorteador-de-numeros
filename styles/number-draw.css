@@ -1,0 +1,134 @@
+.number-draw {
+  margin-block: 2.125rem;
+
+  & .title {
+    & h2 {
+      font-family: "Roboto Flex";
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 150%; /* 1.875rem */
+      text-transform: uppercase;
+
+      color: var(--content-primary);
+    }
+
+    & p {
+      color: var(--content-secondary);
+
+      font-family: "Roboto Flex";
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  & #numbers-container {
+    & #numbers-wrapper {
+      display: flex;
+      gap: 0.75rem;
+
+      & .number-label {
+        display: flex;
+        justify-content: center;
+        color: #c7c9cc;
+
+        text-align: center;
+
+        font-family: "Roboto Flex";
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+      }
+
+      & .input-wrapper {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 1.2px;
+
+        border-radius: 8px;
+
+        width: 5.375rem;
+        height: 100%;
+
+        &::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          border-radius: 10px;
+          z-index: -1;
+
+          border: 2px solid transparent;
+          background: var(--gradient-border);
+          opacity: 0;
+
+          transition: opacity 0.3s ease-in-out;
+        }
+
+        &:hover::before {
+          opacity: 1;
+        }
+
+        & input {
+          width: 100%;
+          height: 100%;
+          border-radius: 8px;
+
+          border: none;
+          outline: none;
+
+          padding: 4px 8px;
+
+          background-color: var(--bg-secondary);
+          color: var(--content-primary);
+
+          font-family: "Roboto Flex";
+          font-size: 1.25rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 150%;
+          text-align: center;
+
+          position: relative;
+          z-index: 1;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .number-draw {
+    & .title {
+      & h2 {
+        font-size: 1.25rem;
+      }
+
+      & p {
+        font-size: 0.875rem;
+      }
+    }
+
+    & #numbers-container {
+      & #numbers-wrapper {
+        & .number-label {
+          font-size: 1rem;
+        }
+
+        & .input-wrapper {
+          width: 4.5rem;
+
+          & input {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
